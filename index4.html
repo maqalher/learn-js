@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Fechas
+        // En Js existe un objeto llamado Date
+
+        /*const diaHoy = new Date();
+
+        let valor;
+
+        //Mes
+        valor = diaHoy.getMonth();
+        //Dia
+        valor = diaHoy.getDate();
+        valor = diaHoy.getDay();
+        //Obtener el año
+        valor = diaHoy.getFullYear();
+        //Minutos
+        valor = diaHoy.getMinutes();
+        //Hora
+        valor = diaHoy.getHours();
+        //Milisegundos desde 1970
+        valor = diaHoy.getTime();
+
+        valor = diaHoy.getFullYear();
+
+        console.log(valor);*/
+
+        // IF ELSE ELSEIF
+
+        /*let puntaje = 1000;
+
+        if (puntaje) {
+            console.log(`El puntaje es de ${puntaje}`);
+        } else {
+            console.log(`No hay puntaje`);
+        }
+
+        // Ternario
+
+        const logeado = true;
+
+        console.log(logeado === true ? 'Si se logeo' : 'No se logeo');*/
+
+        //Switch
+
+        /*let mes;
+
+        switch (new Date().getMonth()) {
+            case 0:
+                mes = 'Enero';
+                break;
+            case 1:
+                mes = 'Febrero';
+                break;
+            case 2:
+                mes = 'Marzo';
+                break;
+            case 3:
+                mes = 'Abril';
+                break;
+            case 4:
+                mes = 'Mayo';
+                break;
+            case 5:
+                mes = 'Junio';
+                break;
+            case 6:
+                mes = 'Julio';
+                break;
+            case 7:
+                mes = 'Agosto';
+                break;
+            case 8:
+                mes = 'Septiembre';
+                break;
+            case 9:
+                mes = 'Octubre';
+                break;
+            case 10:
+                mes = 'Noviembre';
+                break;
+            case 11:
+                mes = 'Diciembre';
+                break;
+            default:
+                mes = "Error";
+                break;
+        }
+        console.log(`Este mes es ${mes}`);*/
+
+        //FOR
+
+        /*for (let i = 1; i < 10; i++) {
+            if (i % 2 == 0) {
+                console.log(`El numero ${i} es par`);
+            } else {
+                console.log(`El numero ${i} es impar`);
+            }
+        }*/
+
+        // While Do While
+
+        /*let musica = ['cancion 1', 'cancion 2', 'cancion 3'];
+        let i = 0;
+        while (i < musica.length) {
+            console.log(`Reproduciendo la cancion  ${musica[i]}`);
+            i++;
+        }*/
+
+        /*let i = 100;
+
+        do {
+            console.log(`Numero ${i}`);
+            i++;
+        } while (i < 10);*/
+
+
+        // forEach
+
+        /*const pendientes = ['Tarea', 'Comer', 'Proyecto', 'Aprender JS'];
+
+        pendientes.forEach(function(pendiente, index) {
+            console.log(`${index}:${pendiente}`);
+        });
+
+        //Map
+
+        const carrito = [{
+            id: 1,
+            producto: 'Libro'
+        }, {
+            id: 2,
+            producto: 'Libreta'
+        }, {
+            id: 3,
+            producto: 'Lapiz'
+        }, {
+            id: 4,
+            producto: 'Goma'
+        }];
+
+        const nombreDelProdcuto = carrito.map(function(carrito) {
+            return carrito.producto;
+        });
+
+        console.log(nombreDelProdcuto);
+
+        const automovil = {
+            modelo: 'Camaro',
+            motor: 6.4,
+            anio: 1969,
+            marca: 'Chevolet'
+        };
+
+        for (let auto in automovil) {
+            console.log(`${auto} : ${automovil[auto]}`);
+
+        }*/
+
+        //Iteradores
+
+        const ciudades = ['Londres', 'New York', 'Madrid', 'Paris'];
+        const ordenes = new Set([123, 231, 131, 102]);
+        const datos = new Map();
+        datos.set('nombre', 'Juan');
+        datos.set('profesion', 'Desarrollador Web');
+
+        //Entries iterador
+        //entries a las ciudades
+        //for (let entrada of ciudades.entries()) {
+        //    console.log(entrada);
+        //}
+
+        //entries para las ordenes
+        //for (let entradas of ordenes.entries()) {
+        //    console.log(entradas);
+        //}
+
+        // entries para el Map
+        //for (let entrada of datos.entries()) {
+        //    console.log(entrada);
+        //}
+
+        //Values iterador
+        //for (let entrada of ciudades) {
+        //    console.log(entrada);
+        //}
+        //for (let entrada of ordenes.values()) {
+        //    console.log(entrada);
+        //}
+
+
+        //Keys iterador
+        //for (let entrada of ciudades.keys()) {
+        //    console.log(entrada);
+        //}
+
+        const mensaje = "Aprendiendo JS";
+        for (let letra of mensaje) {
+            console.log(letra);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="app">
+
+    </div>
+
+    <script>
+        //Objetos
+
+        /*const persona = {
+            nombre: "Miguel",
+            apellido: "Martinez",
+            profesion: "Diseñador Grafico",
+            email: "correo@correo.com",
+            edad: 29,
+            musica: ['Trance', 'Rock', 'Grunge'],
+            hogar: {
+                ciudad: 'Guadalajara',
+                pais: 'México',
+            },
+            nacimiento: function() {
+                return new Date().getFullYear() - this.edad;
+            }
+        }
+
+        console.log(persona.nacimiento());
+        console.log(persona.hogar.ciudad)
+        console.log(persona.musica[1]);
+
+        console.log(persona['nombre']); // No recomendable
+        console.log(persona['hogar']['pais']); // No recomendable*/
+
+        // Arreglo de Objetos
+
+        /*const autos = [{
+            modelo: 'mustang',
+            motor: 6.1
+        }, {
+            modelo: 'camaro',
+            motor: 6.3
+        }, {
+            modelo: 'challenger',
+            motor: 6.2
+        }, ];
+
+        for (let i = 0; i < autos.length; i++) {
+            console.log(`${autos[i].modelo} ${autos[i].motor}`);
+        }*/
+
+        // Funciones
+
+        //function saludar() {
+        //    console.log("Hola");
+        //}
+        //saludar();
+
+        /*function suma(a, b) { //  Valor defalut (a = 10 , b = 20)
+            //console.log(a + b);
+            return a + b;
+        }
+
+        a = 10;
+        b = 20;
+        console.log(suma(a, b));*/
+
+        //IIFE
+        /*(function() {
+            console.log("Creando un IIFE");
+        })();
+
+        (function(tecnologia) {
+            console.log(`Aprendiendo ${tecnologia}`);
+        })('Java Script');*/
+
+        // Metodos de propiedad.- Cuando una funcion se pone dentro de un objeto
+
+        /*const musica = {
+            reproducir: function(id) {
+                console.log(`Reproduciendo la Cancion con id ${id}`);
+            },
+            pausar: function() {
+                console.log('Pausando la cancion');
+            }
+        }
+
+        musica.reproducir(20);
+        musica.pausar();*/
+
+        //Try Catch
+
+        try {
+            algo();
+        } catch (error) {
+            console.log(error);
+        } finally {
+            console.log('Se ejecuta de todos modos');
+        }
+    </script>
+</body>
+
+</html>
