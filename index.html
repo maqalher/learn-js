@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aprendiendo JS Moderno</h1>
+
+    <div id="app">
+
+    </div>
+    <script>
+        //document.getElementById('app').innerHTML = "Alan";
+
+        //Pimer programa
+        /*let nombre = prompt('¿Cual es tu nombre?');
+        let edad = prompt('¿Cual es tu edad?');
+
+        document.getElementById('app').innerHTML = `Bienvenido ${nombre} de ${edad} años`;*/
+
+        //Consola
+        /*console.log(document);*/
+
+        //VARIABLES
+        //no permiten numeros y caracteres especiales y palabras reservadas
+
+        /*var primerNombre = "Alan"; //camelcase
+        var primer_nombre = "Alan"; // underscore
+        var PrimerNaombre = "Alan"; // pascal case*/
+
+        /*let mi_valor_variable = "El valor de un let pude cambiar pero no se pude redeclarar nuevamente";
+
+        const mi_valor_const = "El valor de un const no pude cambiar y debe de ser inicalizada desde un principio";*/
+
+        //Concatenando
+        /*let aprendiendo = "Aprendiendo", tecnologia = "JavaScript";
+
+        console.log(aprendiendo + " " + tecnologia);
+        console.log(`${aprendiendo} ${tecnologia}`);*/
+
+        //Numeros
+        /*
+        let numero1 = 10;
+        let numero2 = 10;
+        let suma = numero1 + numero2;
+        let res;
+        res = Math.PI; // PI
+        res = Math.round(4.8); //Redondeo
+        res = Math.ceil(2.3); //redondeo hacia arriba
+        res = Math.floor(3.8); //Redondeo hacia abajo
+        res = Math.sqrt(144); //Raiz Cuadrada
+        res = Math.abs(-3); //Numero Absoluto
+        res = Math.pow(8, 3); // Potencia
+        res = Math.min(4,6,8,1,2); // Minimo
+        res = Math.max(3,5,2,6,7); // Maximo;
+        res = Math.random(); */
+
+        //Tipos de Datos
+        /*
+        let valor;
+        valor = 'Juan';
+        valor = 20;
+        valor = 20.30;
+        valor = -30;
+        valor = "22";
+
+        valor = false;
+
+        valor = null;
+
+        valor = Symbol('Simbolo');
+
+
+        valor = [1,2,3,4]; //Arreglo
+
+        valor = {
+            nombre: 'Alan',
+            profesion: 'Desarrollador Web'
+        }; // Objeto 
+
+        valor = new Date(); //Fecha      
+
+        console.log(typeof(valor));  */
+
+        //Comparaciones
+        /*
+        console.log(2>5);
+        console.log(2!=2);
+        console.log(4==='4');*/
+
+        //Conversion String -> Number
+        /*
+        let v1 = Number('40');
+        let v2 = parseInt('20');
+        let nan = parseInt('uno'); //NaN 
+        let v3 = parseFloat('10.14');*/
+
+        //Conversion Number -> String
+        /*
+        let cp = 42185;
+        cp = String(cp);
+        console.log(cp.length);
+
+        let v4 = '34';
+        var dato = v4.toString();
+        console.log(dato);*/
+
+        //Template Literals o String Template
+
+        const prducto1 = 'Pizza', precio1 = 30, prducto2 = 'Hamburgesa', precio2 = 40;
+        
+        let html;
+
+        //html =  '<ul>' + 
+        //        '<li>Orden: ' + prducto1 + '</li>' + 
+        //        '<li>Precio: ' + precio1 + '</li>' + 
+        //        '<li>Orden: ' + prducto2 + '</li>' + 
+        //        '<li>Precio: ' + precio2 + '</li>' + 
+        //        '<li>Total: ' + (precio1 + precio2) + '</li>' + 
+        //        '</ul>'; 
+
+        html =  `    
+                <ul>
+                    <li>Orden: ${prducto1}</li>
+                    <li>Precio: ${precio1}</li>
+                    <li>Orden: ${prducto2}</li>
+                    <li>Precio: ${precio2}</li>
+                    <li>Total: ${total(precio1,precio2)}</li>
+                </ul>
+                `;
+
+        function total(precio1, precio2){
+            return precio1 + precio2;
+        }
+
+            document.getElementById('app').innerHTML = html;
+    </script>
+    
+</body>
+</html>

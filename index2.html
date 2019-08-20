@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app">
+        
+    </div>
+
+    <script>
+        //Arreglos
+            let numeros = [1,2,3,4,5];
+
+            let meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril');
+
+            console.log(Array.isArray(meses));
+            console.log(meses.length);
+            meses.push('Junio');
+            console.log(meses);
+
+            console.log(meses.indexOf('Abril'));
+            
+            meses.unshift('Mes 0'); //Agrega desde el principio
+            meses.pop(); //Elimina el ultimo elemento
+            meses.shift(); //Elimna el primer elemento
+            meses.splice(2,1); //Elimina un elemento en espesifico, primer parametro el index segundo cuanto elementos
+
+            console.log(meses);
+
+            meses.reverse(); //invierte el orden de los elementos
+
+            var arr1 = [1,2,3];
+            var arr2 = [9,8,7];
+            console.log = arr1.concat(arr2); // Une los arrays
+
+            meses.sort(); // Ordena los elementos por orden alfabetico
+            
+            var arrayNumeros = [2,45,66,3,7,5,3];
+            arrayNumeros.sort(function(x,y){
+                return x - y ;
+            }); //Ordena de menor a mayor
+
+            arrayNumeros.sort(function(x,y){
+                return y - x ;
+            }); //Ordena de mayor a menor
+            
+    </script>
+</body>
+</html>
