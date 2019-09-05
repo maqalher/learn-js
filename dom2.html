@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="titulo" class="eltitulo">El Titulo</h1>
+</body>
+<script>
+   /*let encabezado;
+   encabezado = document.getElementById('titulo');
+   encabezado = document.getElementById('titulo').id;
+   encabezado = document.getElementById('titulo').className;
+   encabezado = document.getElementById('titulo').textContent;
+   encabezado = document.getElementById('titulo').innerText;
+   encabezado = document.getElementById('titulo');
+
+   encabezado.style.background = 'green';
+   encabezado.style.color = "#FFF";
+   encabezado.style.padding = '10px';
+
+   encabezado.innerText = "Nuevo titulo";
+
+   console.log(encabezado);*/
+
+    // Query Selector
+
+    /*let valor;
+    valor = document.querySelector('#titulo');  
+    valor = document.querySelector('.eltitulo'); 
+    valor = document.querySelector('h1'); 
+
+    let enlace;
+    enlace = document.querySelector('#principal a:first-child');
+    enlace = document.querySelector('#principal a:nth-child(3)');
+    enlace = document.querySelector('#principal a:last-child');
+
+    console.log(valor);
+
+    // querySelector -> solo trae un elemento y querySelectorAll -> trae un NodeList
+    let enlcaces = document.querySelectorAll('.enlaces'); // Todos los enlaces
+
+    const listaEnlace = document.querySelector('#principal').getElementsByClassName('enlace'); // Combinacion de querySelector y getElement*/
+
+    //Transversing
+
+    let navegacion = document.querySelector('#principal');
+
+    console.log(navegacion.childNodes);
+    console.log(navegacion.children);
+    console.log(navegacion.children[0].nodeName);
+    console.log(navegacion.children[0].nodeType); 
+    /*
+        node type
+        1 = Elemetos
+        2 = Atributos
+        3 = Text Node
+        8 = Comentarios
+        9 = Documentos
+        10 = Doctyope 
+    */
+
+    console.log(navegacion.children[0].children[0].children); //los hijos del hijo del hijo
+    console.log(navegacion.lastElementChild); // ultimo elemeto
+    console.log(navegacion.firstElementChild); // primer elemento
+    console.log(navegacion.childElementCount);
+
+    console.log(navegacion.parentElement.parentElement.parentElement); // el padre del padre del padre de navegacion
+
+    console.log(navegacion.previousElementSibling); // elemento al mismo nivel previo
+    console.log(navegacion.nextElementSibling); // elemeto al mismo nivel proximo
+</script>
+
+</html>

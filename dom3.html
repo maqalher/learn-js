@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        
+        <h1 id="encabezado">Mi titlo</h1>
+
+    </div>
+        <nav class="secundario">
+            <a class="enlace" href="#">uno</a>
+            <a class="enlace" href="#">dos</a>
+            <a id="tres" class="enlace" href="#">tres</a>
+        </nav>
+
+
+    
+</body>
+<script>
+    // Crear elementos
+    
+    /*let enlace = document.createElement('a');
+
+    // Agregar clase
+    enlace.className = 'enlace';
+    // Agragar id
+    enlace.id = 'nuvo-id';
+    // Agregar atributo href
+    enlace.setAttribute('href', '#');
+    // Agragar Texto
+    //enlace.appendChild(document.createTextNode('Nuevo Enlace'));
+    enlace.textContent = 'Nuevo Enlace';
+
+    //Agregarlo al Html
+    document.querySelector('.secundario').appendChild(enlace);
+
+    console.log(enlace)*/
+
+    //Remplazar Elemento
+
+    /*const nuevoElemento = document.createElement('h2');
+    //agreagar id
+    nuevoElemento.id = 'encabezado';
+    //agreara texot
+    nuevoElemento.appendChild(document.createTextNode('Los Mejores Cursos'));
+    // elemento aterios
+    const anterior = document.querySelector('#encabezado');
+
+    //elemento padre
+    const elPadre = document.querySelector('.contenedor');
+
+    //Remplazar
+    elPadre.replaceChild(nuevoElemento, anterior);*/
+
+    // AGREGAR Y QUITAR
+
+    let enlaces = document.querySelectorAll('.enlace');
+    let nav = document.querySelector('.secundario');
+
+    //Eliminar elemeto
+        enlaces[0].remove();
+    //Eliminar desde el padre
+        //nav.removeChild(enlaces[0]);
+
+    let primerAnchor = document.querySelector('#tres');
+
+    let showElemento;
+    //Obtener clase 
+    showElemento = primerAnchor.className;
+    showElemento = primerAnchor.classList.add('nueva-clase');
+    showElemento = primerAnchor.classList.remove('nueva-clase');
+    showElemento = primerAnchor.classList;
+
+    //Leer atributos
+    showElemento = primerAnchor.getAttribute('href'); // Obtiene Atributo
+    primerAnchor.setAttribute('href', 'http://facebook.com'); // Modifica Atributi
+    primerAnchor.setAttribute('data-id', 20);
+    showElemento = primerAnchor.hasAttribute('data-id'); // Comprueba atributi
+    primerAnchor.removeAttribute('data-id'); // Elimina Atributo
+
+    console.log(primerAnchor);
+</script>
+
+</html>
