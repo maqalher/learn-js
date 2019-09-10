@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Stroage</title>
+</head>
+<body>
+    <script>
+    // Agregar a Local Storage -> Se borra manual o si el usuario borra cache
+    localStorage.setItem('nombre', 'Alan');
+    localStorage.removeItem('nombre');
+    localStorage.setItem('nombre', 'Maqueda');
+    let nombrePrint = localStorage.getItem('nombre');
+    console.log(nombrePrint);
+
+    localStorage.clear(); // Borra todo el localStorage
+
+    // Session Storage -> Cuando se cierra el navegador se borra todo
+    //sessionStorage.setItem('nombre', 'Alan')
+    </script>
+</body>
+</html>
