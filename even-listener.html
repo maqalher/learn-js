@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="name" type="text">
+    <button id="submit-buscador" class="mi-boton btn">Boton</button>
+    <script>
+        /*se agrega e para mandar el evento a al funcion y asi poder trabajar 
+            con elle regularmente se suele utlizar e, evt o event*/
+            /*document.querySelector('#submit-buscador').addEventListener('click', function(e){
+                e.preventDefault();
+                alert('Funciona');
+                let elemento;
+                elemento = e;
+                elemento = e.target;
+                elemento = e.target.id;
+                elemento = e.target.className;
+                elemento = e.target.innerText;
+
+
+                console.log(elemento);
+            });*/
+
+            //Evntos con el mouse
+
+            /*let btn = document.querySelector('#submit-buscador');
+
+            //Click
+            //btn.addEventListener('click', obtenerEvento);
+            //Doble Click
+            //btn.addEventListener('dblclick', obtenerEvento);
+            //Mouse Enter  - hover
+            //btn.addEventListener('mouseenter', obtenerEvento);
+            //Mouse Leave
+            //btn.addEventListener('mouseleave', obtenerEvento);
+            //Mouse Over
+            //btn.addEventListener('mouseover', obtenerEvento);
+            //Mouse Out
+            //btn.addEventListener('mouseout', obtenerEvento);
+            //Mouse Down - click al presionar
+            //btn.addEventListener('mousedown', obtenerEvento);
+            //Mouse Up -click al soltar
+            //btn.addEventListener('mouseup', obtenerEvento); 
+            //Muse Move
+            btn.addEventListener('mousemove', obtenerEvento);
+
+
+            function obtenerEvento(e){
+                console.log(`EVENTO: ${e.type}`);
+            }*/
+
+            //Eventos Input
+           /* let name = document.querySelector('#name');
+            //name.addEventListener('keyup', getValue);
+            //name.addEventListener('keydown', getValue);
+            //name.addEventListener('keypress', getValue);
+            //name.addEventListener('blur', getValue);
+            //name.addEventListener('cut', getValue);
+            //name.addEventListener('copy', getValue);
+            //name.addEventListener('paste', getValue);
+            //name.addEventListener('input', getValue);
+            name.addEventListener('change', getValue); //Mayor mente utiliado para selects
+
+            function getValue(e){
+                console.log(name.value);
+                console.log(`EVENTO: ${e.type}`);
+            }
+            */
+
+            //Event Bubbling 
+            /*Si hay selectores dente de un mismo contenedor es muy probable que estos se vena afectados y ejecute todos para solucionar esto utilizaremos stopPropagation*/
+
+            /*const card = document.querySelector('#card');
+            const infoCurso = document.querySelector('#infoCurso');
+            const agregarCarrito = document.querySelector('#agregarCarrito');
+
+            card.addEventListener('click', function(e){
+                console.log('Click en Card')
+                e.stopPropagation();
+            });
+
+            infoCurso.addEventListener('click', function(e){
+                console.log('Click en infoCurso')
+                e.stopPropagation();
+            });
+
+            agregarCarrito.addEventListener('click', function(e){
+                console.log('Click en agregarCarrito')
+                e.stopPropagation();
+            });
+            */
+
+            //Delegation
+
+            document.body.addEventListener('click', eliminarElemnto);
+
+            function eliminarElemnto(e){
+                e.preventDefault()
+                //console.log('click');
+                if(e.target.classList.contains('btn')){
+                    console.log('Si la tiene');
+                    //console.log(e.target);
+                    e.target.remove();
+                    //console.log(e.target.parentElement.parentElement.remove());
+
+                    //if(e.target.classList.contains('agregar')){
+                    //    console.log('Curso Agregado');
+                    //}
+                }
+                
+            }
+    </script>
+</body>
+</html>
