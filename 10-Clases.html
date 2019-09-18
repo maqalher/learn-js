@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clases</title>
+</head>
+<body>
+    <script>
+        // Clase en ES6
+        /*class Cliente {
+            constructor(nombre, apellido, saldo) {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.saldo = saldo;
+            }
+
+            imprimirSaldo() {
+                return `Hola ${this.nombre}, tu saldo es de ${this.saldo}`;
+            }
+
+            tipoCliente() {
+                let tipo;
+                if(this.saldo > 10000){
+                    tipo = 'Gold';
+                }else if(this.saldo > 5000){
+                    tipo = 'Platinum';
+                }else{
+                    tipo = 'Normal';
+                }
+
+                return tipo
+            }
+
+            retirarSaldo(retiro){
+                return this.saldo -= retiro;
+            }
+
+            static bienvenida(){
+                return `Bienvenido al Cajero`;
+            }
+        }
+
+        const maria = new Cliente('Maria', 'Perez', 10000);
+        maria.retirarSaldo(3000);
+        console.log(maria.imprimirSaldo());*/
+
+        // Herencia
+        class Cliente {
+            constructor(nombre, saldo) {
+                this.nombre = nombre;
+                this.saldo = saldo;
+            }
+
+            imprimirSaldo() {
+                return `Hola ${this.nombre}, tu saldo es de ${this.saldo}`;
+            }
+            static bienvenida(){
+                return `Bienvenido al Cajero`;
+            }
+        }
+
+        class Empresa extends Cliente{
+            constructor(nombre, saldo, telefono, tipo){
+                //Va hacia el constructor padre
+                super(nombre, saldo);
+                this.telefono = telefono;
+                this.tipo = tipo;
+            }
+
+            // Para modificar la el metodo es necesario que se llamen igual y solo hay de sobreescribirlo
+            static bienvenida(){
+                return `Bienvenido al Cajero para Empresas`;
+            }
+        }
+
+        const empresa1 = new Empresa('Empresa', 10000, 444444, 'Construccion');
+
+        console.log(empresa1.imprimirSaldo());
+    </script>
+</body>
+</html>
