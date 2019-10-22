@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "nombre": "Alan",
+        "empresa": "House Hack",
+        "puesto": "Web Developer"
+    },
+    {
+        "id": 2,
+        "nombre": "Badillo",
+        "empresa": "House Hack",
+        "puesto": "App Developer"
+    },
+    {
+        "id": 3,
+        "nombre": "Daniel",
+        "empresa": "House Hack",
+        "puesto": "Desktop Developer"
+    }
+]
