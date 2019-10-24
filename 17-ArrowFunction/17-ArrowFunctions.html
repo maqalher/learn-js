@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+        // Funcion
+        let aprendiendo;
+
+        // funcion normal
+        aprendiendo = function(){
+            return "Aprendiendo JS";
+        }
+        // arrow
+        aprendiendo = () => {
+            return "Aprendiendo JS";
+        }
+
+        // una linea no requiere llaves (retorna valor)
+        aprendiendo = () => "Aprendiendo JS";
+
+        // retornar objeto (se encierra entre parentesis)
+        aprendiendo = () => ({aprendiendo: "Aprendiendo JS"});
+    
+        console.log(aprendiendo());
+
+        //pasar parametros
+        aprendiendo = (tecnologia) => console.log(`Aprendiendo ${tecnologia}`);
+        // un solo parametro no requiere de parentesis
+        aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`);
+
+        aprendiendo('Js');
+
+        //para 2 o mas parametros son necesarios los parentesis
+
+        aprendiendo = (t1, t2) => console.log(`Aprendiendo ${t1} y ${t2}`);
+
+        aprendiendo('Js', 'ES6');
+
+        // ejemplo con callbak
+        let productos = ['Disco', 'Playera', 'Guitarra'];
+        // nomal
+        let letrasProductos = productos.map(function(productos){
+            return productos.length;
+        });
+        // arrow
+        letrasProductos = productos.map((productos) => {
+            return productos.length;
+        })
+        // reducir mas
+        letrasProductos = productos.map(productos => productos.length);
+
+        console.log(letrasProductos);
+
+        //ejmplo forEach
+
+        productos.forEach(function(producto){
+            console.log(producto);
+        });
+
+        // arrow
+        productos.forEach(producto => console.log(producto));
+
+    </script>
+</body>
+</html>
