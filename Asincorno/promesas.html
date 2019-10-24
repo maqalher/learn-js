@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promises</title>
+</head>
+<body>
+    
+    <script>
+        // Promises
+
+       const esperando = new Promise( function(resolve, reject){
+            setTimeout(function(){
+                resolve('Se ejecuto');
+            }, 5000);
+        });
+
+        esperando.then(function(mensaje){
+            console.log(mensaje)
+        });
+
+        // Ejemplo reject
+        const aplicarDescuento = new Promise(function(resolve, reject){
+            const descuento = false;
+            if(descuento){
+                resolve('Se aplico descuento');
+            }else{
+                reject('No se puedo aplicar el descuento');
+            }
+        });
+
+        aplicarDescuento.then(function(resultado){
+            console.log(resultado);
+        }).catch(function(error){
+            console.log(error);
+        });
+    </script>
+</body>
+</html>

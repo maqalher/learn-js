@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Callbak en foreach
+
+        const ciudades = ['Monterrey', 'Guadalajara', 'Pachuca','Puebla'];
+
+        // Inline callback
+        ciudades.forEach(function(ciudad){
+            console.log(ciudad);
+        });
+
+        // Con funcion definida
+        //function callback(ciudad){
+          //  console.log(ciudad);
+        //}
+        //ciudades.forEach(callback);
+
+        // Listado de Paises 
+        const paises = ['Mexico', 'Alemania', 'Brasil', 'Francia'];
+
+        // Se agrega un nuevo pais despues de 2 segundos
+        function nuevoPais(pais, callback) {
+            setTimeout(function() {
+                paises.push(pais);
+                callback();
+            }, 2000);
+        }
+
+        // Los paises se muestran despues de 1 seg
+        function mostrarPaises() {
+            setTimeout(function() {
+                let html = '';
+                paises.forEach(function(pais) {
+                    html += `<li>${pais}</li>`;
+                });
+                document.getElementById('app').innerHTML = html;
+            }, 1000);
+        } 
+
+        // Agregar nuevo pais
+        nuevoPais('Holanda', mostrarPaises);
+
+        // Mostrar los paises
+        mostrarPaises();
+        
+    </script>
+</body>
+</html>

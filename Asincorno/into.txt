@@ -1,0 +1,24 @@
+Async o asynchronous Javascripts
+
+
+Codigo sincrono
+En el codigo synchronous si tienes un programa de 2 lineas, la linea 2 no puede empezar sin haber termionado la linea 2
+
+Ejemplo la fila del supermercado(el de atras nunca paga primero)
+
+Codigo Asicnrono
+En el codigo asynchronous puedes tener 2 lineas de codigo y la linea  2 ejecutarse  y finalizar antes que la linea uno termione de hacerlo
+
+Ejemplo: Restaurante -> (llega primero un vaso de agua que un platillo) depende del grado de complejidad de la tarea
+
+La mayotia de las veces  que escribas codigo asincrono sera interactuando con una API o REST API
+
+XMLHTTPRequest y FetchApi son ejemplos de codigo Asincrono
+
+jQuery es otro ejemplo de una libreria de este tipo
+
+Funciones para crear codigo Asicnrono
+
+    + Callbacks 
+    + Promises
+    + Async/Awaits
